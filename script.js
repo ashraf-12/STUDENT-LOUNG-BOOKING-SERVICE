@@ -1,10 +1,8 @@
 document.getElementById("bookingForm").addEventListener("submit", async function(event) {
   event.preventDefault();
-
+  
   const fromDate = new Date(document.getElementById("from").value);
   const now = new Date();
-
-  // Validation: must be at least 3 hours before booking
   const diffHours = (fromDate - now) / (1000 * 60 * 60);
   if (diffHours < 3) {
     showMessage("⚠️ Booking must be made at least 3 hours in advance!", "error");
@@ -20,7 +18,7 @@ document.getElementById("bookingForm").addEventListener("submit", async function
   };
 
   try {
-    const response = await fetch("https://formspree.io/f/xwpnpdjo", {
+    const response = await fetch("https://formspree.io/f/xvgbgenj", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)
@@ -32,7 +30,7 @@ document.getElementById("bookingForm").addEventListener("submit", async function
     } else {
       showMessage("❌ Error submitting booking. Please try again.", "error");
     }
-  } catch (err) {
+  } catch {
     showMessage("❌ Network error. Please try again later.", "error");
   }
 });
