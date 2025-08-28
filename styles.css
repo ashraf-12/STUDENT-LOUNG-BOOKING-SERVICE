@@ -1,0 +1,130 @@
+/* ===== Page Layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== Instructions Section ===== */
+.instructions {
+  background: #fff8e1;
+  border: 1px solid #fbc02d;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.instructions h2 {
+  color: #e65100;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.instructions p {
+  font-size: 1em;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* ===== Contact Table ===== */
+.instructions table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+.instructions table, 
+.instructions th, 
+.instructions td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: left;
+}
+
+.instructions th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  color: #333;
+}
+
+.instructions td {
+  background-color: #fff;
+}
+
+.instructions tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+/* ===== Form Styling ===== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Status Message ===== */
+#message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  display: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+#message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+#message.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
